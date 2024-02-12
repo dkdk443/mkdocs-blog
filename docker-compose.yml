@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mkdocs:
+    # Use the Dockerfile in the current directory
+    build: .
+    # Map port 8000 on the host to port 8000 on the container
+    ports:
+      - "8010:8000"
+    # Mount the current directory to /docs inside the container
+    volumes:
+      - ${PWD}:/docs

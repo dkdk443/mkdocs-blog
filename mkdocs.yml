@@ -1,0 +1,28 @@
+site_name: "ブログ"
+site_url: "https://dkdk443.github.io/mkdocs-blog/"
+theme:
+  language: ja
+  name: "material"
+  palette:
+    primary: amber
+    accent: indigo
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+plugins:
+  - blog
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+extra:
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
